@@ -179,6 +179,7 @@ try {
     repository.slug,
     '--ref',
     defaultBranch,
+    '--yaml',
   ]);
 
   console.log(`仓库：${repository.slug}`);
