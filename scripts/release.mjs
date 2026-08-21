@@ -225,11 +225,22 @@ try {
     '--limit',
     '1',
     '--json',
-    'tagName,url,name,publishedAt',
+    'tagName,name,publishedAt',
   ]).stdout.trim();
   const latestRelease = JSON.parse(release || '[]')[0];
   if (latestRelease) {
-    console.log(`发布完成：${latestRelease.tagName} ${latestRelease.url}`);
+    const releaseUrl = run('gh', [
+      'release',
+      'view',
+      latestRelease.tagName,
+      '--repo',
+      repository.slug,
+      '--json',
+      'url',
+      '--jq',
+      '.url',
+    ]).stdout.trim();
+    console.log(`发布完成：${latestRelease.tagName} ${releaseUrl}`);
   } else {
     console.log('Action 已完成，但没有查询到 Release，请打开运行地址检查日志');
   }
