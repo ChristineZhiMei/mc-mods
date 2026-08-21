@@ -1,0 +1,10 @@
+{
+  "name": "mc-mods",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.9.0",
+  "scripts": {
+    "repos:init": "node scripts/repos.mjs init",
+    "repos:update": "node scripts/repos.mjs update"
+  }
+}

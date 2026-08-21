@@ -1,0 +1,7 @@
+[submodule "packages/mc-better-experience"]
+	path = packages/mc-better-experience
+	url = git@github.com:ChristineZhiMei/mc-better-experience.git
+
+[submodule "packages/mc-compass-enhancement"]
+	path = packages/mc-compass-enhancement
+	url = git@github.com:ChristineZhiMei/mc-compass-enhancement.git
